@@ -1,0 +1,13 @@
+<?php
+
+namespace Modules\{Module}\Controllers;
+
+use System\Core\Controllers\AdminController as SystemAdminController;
+
+class AdminController extends SystemAdminController
+{
+    public function getList()
+    {
+        return 'LIST';
+    }
+}

@@ -1,0 +1,10 @@
+<?php
+
+Route::group(['namespace' => 'Modules\{Module}\Controllers'], function () {
+    /**
+     * ROUTES FOR ADMIN: {Module}
+     */
+    Route::group(['middleware' => ['admin'], 'prefix' => config('cms.admin_prefix') . '/{modules}'], function () {
+        Route::get('/', 'AdminController@getList')->name('mod_{module}.admin.list');
+    });
+});
